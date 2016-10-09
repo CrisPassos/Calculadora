@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">01-Calculator</string>
+    <string name="app_main_title">Calculator</string>
+    <string name="app_number_one">Number 1</string>
+    <string name="app_number_two">Number 2</string>
+    <string name="app_calculate">Calculate</string>
+    <string name="app_result">Result</string>
+    <string name="app_sum">Sum: </string>
+</resources>

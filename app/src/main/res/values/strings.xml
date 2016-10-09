@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">01-Calculadora</string>
+    <string name="app_main_title">Calculadora</string>
+    <string name="app_number_one">Número 1</string>
+    <string name="app_number_two">Número 2</string>
+    <string name="app_calculate">Calcular</string>
+    <string name="app_result">Resultado</string>
+    <string name="app_sum">Soma é: </string>
+</resources>
