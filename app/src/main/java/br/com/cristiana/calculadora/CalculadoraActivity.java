@@ -1,10 +1,10 @@
 package br.com.cristiana.calculadora;
 
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CalculadoraActivity extends AppCompatActivity {
 
@@ -24,21 +24,19 @@ public class CalculadoraActivity extends AppCompatActivity {
 
     public void calcular(View v){
 
-        double num_1 =   Double.valueOf(number01.getText().toString());
-        double num_2 =   Double.valueOf(number02.getText().toString());
+        int num_1 =   Integer.parseInt(number01.getText().toString());
+        int num_2 =   Integer.parseInt(number02.getText().toString());
 
-        double resultado = num_1 + num_2;
+        try {
+            int resultado = num_1 + num_2;
 
-        /*
-        Toast toast = Toast.makeText(this, "A soma é: "+ resultado, Toast.LENGTH_LONG);
-        toast.show();
-        */
+            Toast toast = Toast.makeText(this, getString(R.string.app_sum) + resultado, Toast.LENGTH_LONG);
+            toast.show();
 
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle(R.string.app_result );
-        alert.setMessage(String.valueOf(resultado));
-        alert.setPositiveButton("OK", null);
-        alert.show();
+        }catch(Exception e){
+            Toast toast = Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
+            toast.show();
+        }
 
     }
 }
